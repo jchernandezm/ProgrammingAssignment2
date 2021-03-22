@@ -1,13 +1,13 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This functions create a cache  matrix with its inverse in order to optimize the overall 
+## processing time and computng effort
 
-## Write a short comment describing this function
+## this function creates a mtrix wit the atribute inv, which is the inverse of the matrix
 
 makeCacheMatrix <- function(x = matrix()) {
       inv <- NULL
       set <- function(y){
             x <<- y
-            m <<- NULL
+            inv <<- NULL
             }
       
       get <- function() x
@@ -18,7 +18,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## this function creates updates the cace memory of a given matrix
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
