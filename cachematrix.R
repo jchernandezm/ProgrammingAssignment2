@@ -25,7 +25,12 @@ cacheSolve <- function(x, ...) {
       
       act <- y$get()
       
-      if ( identical(act,x)){
+      if (is.null(y$getInv)){
+            inv <- solve(x)
+            y$setInv(inv)
+      }
+      
+      else if ( identical(act,x)){
             
             inv <- y$getInv()
       }
